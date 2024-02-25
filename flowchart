@@ -1,0 +1,26 @@
+def start_call():
+    print("Initiating call to Spring Credit Union Bank...")
+
+    for _ in range(3):  # Try 3 times to contact a representative
+        if phone_rings():
+            return
+    end_call()
+
+def phone_rings():
+    print("Phone rings...")
+    option = input("Press 3 to speak with a customer service representative: ")
+    if option == "3":
+        attempt_to_connect()
+        return True
+    else:
+        return False
+
+def attempt_to_connect():
+    print("Attempting to connect to a customer service representative...")
+    print("Unfortunately, no representative is available at the moment.")
+
+def end_call():
+    print("End call.")
+    print("Thank you for contacting Spring Credit Union Bank.")
+
+start_call()
